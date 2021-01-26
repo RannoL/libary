@@ -1,0 +1,74 @@
+#newBook {
+    background-color: aquamarine;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    margin: 4px 2px;
+    border-radius: 50%;
+    outline:none;
+    transition: all .25s ease ;
+}
+
+#newBook:hover{
+    background-color:cadetblue;
+    transform:scale(1.3);
+    transition: all 0.1 s ease;
+}
+
+.formPopup{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-top: 3%;
+    z-index: 9;
+
+}
+
+#bookForm {
+    display: block;
+    width: 20em;
+    height: 90em;
+    padding: 10px;
+    align-content: center;
+  }
+
+  #bookForm input[type=text]{
+      width: 80%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+  } 
+
+  .closeButton {
+      display: float;
+      float: right;
+  }
+
+  .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+

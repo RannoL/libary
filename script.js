@@ -20,16 +20,40 @@ function addBookToLibary() {
 
 
 function displayLibary(){
-    const div = document.getElementById("booksDisplay")
+    const div = document.getElementById("booksDisplay");
     for (let i = 0; i < myLibary.length; i++) {
-       let para = document.createElement("p");
-       para.innerHTML = myLibary[i];
-       div.appendChild(para);
+       let newDiv = document.createElement("div");
+       newDiv.innerHTML = myLibary[i];
+       div.appendChild(newDiv);
        
     }
+}
+//toggle hide on progress input
+function showProgressInput(){
+    //label
+    document.querySelector('label[for="progressInput"]')
+            .classList
+            .toggle("hidden");
+    //input
+    document.getElementById("progressInput")
+            .classList
+            .toggle("hidden");
 }
 
 function capitalizeFirst(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+function openForm(){
+    document.getElementById("formPopup").style.display = "flex";
+    document.getElementById("modal").style.display ="block";
+}
+
+function closeForm(){
+    document.getElementById("formPopup").style.display = "none";
+    document.getElementById("modal").style.display ="block";
+
+}
+
+
 
