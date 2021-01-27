@@ -12,32 +12,35 @@
     </head>
     <body>
         <div class="modal" id="modal">
-            <div class="formPopup" id="formPopup">
-                <form id="bookForm">
+            <form id="bookForm">
+                <div id="formHeader">
+                    <h1 class="modalHeader">New Book</h1>
                     <button onclick="closeForm()" class="closeButton">x</button>
+                </div>
+                <div id="formContent">
                     <label for="title">Title*<br></label>
-                    <input type="text" id="title"><br>
+                    <input type="text" id="title" placeholder="Title"><br>
                     <label for="author">Author*<br></label>
                     <input type="text" id="author"><br>
                     <label for="pages">Pages*<br></label>
                     <input type="text" id="pages"><br>
                     <label for="language">Language*<br></label>
                     <input type="text" id="language"><br>
-                    <label for="pages">Publishing date<br></label>
-                    <input type="text" id="pages"><br>
+                    <label for="date">Publishing date<br></label>
+                    <input type="date" id="date"><br>
                     <label for="is_read">Completed?</label>
                     <input type="checkbox" id="is_read">
                     <label for="in_progress">In progress?</label>
-                    <input type="checkbox" id="in_progress" onclick=showProgressInput()>
-                    <label for="progressInput" class="hidden">Progress:<br></label>
-                    <input type="text" id="progressInput" class="hidden"><br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
+                    <input type="checkbox" id="in_progress" onclick=showProgressInput()><br>
+                    <label for="progressInput" class="hidden">Progress:</label>
+                    <input type="number" min=0 id="progressInput" class="hidden"><br>
+                    <div id="addWrapper">
+                        <input type="submit" value="Add">
+                    </div>
+                </div>
+            </form>
         </div>
  
-
-
         <div id="booksDisplay"></div>
         <button id="newBook" onclick="openForm()">+</button>
     </body>

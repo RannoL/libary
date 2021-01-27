@@ -45,12 +45,12 @@ function capitalizeFirst(string){
 }
 
 function openForm(){
-    document.getElementById("formPopup").style.display = "flex";
+    document.getElementById("bookForm").style.display = "flex";
     document.getElementById("modal").style.display ="block";
 }
 
 function closeForm(){
-    document.getElementById("formPopup").style.display = "none";
+    document.getElementById("bookForm").style.display = "none";
     document.getElementById("modal").style.display ="block";
 
 }
